@@ -1,1 +1,61 @@
-﻿
+﻿Mediator Design Pattern
+The Mediator is a behavioral design pattern that defines an object that encapsulates how a set of objects interact. It promotes loose coupling by keeping objects from referring to each other explicitly and allows their interaction to be centralized in a mediator object.
+
+Key Idea
+Define a mediator object that encapsulates the interaction logic between a set of objects.
+
+Objects communicate with each other through the mediator, rather than directly.
+
+Promote loose coupling and reduce dependencies between objects.
+
+When to Use the Mediator Pattern
+When you have a set of objects that communicate in complex ways.
+
+For example, a chat application where users send messages to each other.
+
+When you want to reduce dependencies between objects.
+
+Objects only need to know about the mediator, not each other.
+
+When you want to centralize control over the interaction logic.
+
+The mediator handles the coordination, making it easier to manage and extend.
+
+Example Without Mediator
+Imagine you're building a chat application where users can send messages to each other. Without the Mediator pattern, users might communicate directly:
+
+Problems with This Approach
+Tight Coupling:
+
+Users are tightly coupled to each other, as they need to know about each other to communicate.
+
+Complexity:
+
+As the number of users grows, the communication logic becomes more complex and harder to manage.
+
+Violates Single Responsibility Principle:
+
+Users are responsible for both sending and receiving messages, as well as managing communication.
+
+With Mediator
+Now, let's refactor the above example using the Mediator pattern.
+
+Key Differences and Benefits
+Loose Coupling:
+
+Users are decoupled from each other and only interact through the mediator.
+
+Centralized Control:
+
+The mediator encapsulates the communication logic, making it easier to manage and extend.
+
+Single Responsibility Principle:
+
+Users are responsible for sending and receiving messages, while the mediator handles the communication logic.
+
+Summary
+Without Mediator: Tight coupling, complexity, and violation of the Single Responsibility Principle.
+
+With Mediator: Loose coupling, centralized control, and separation of concerns by encapsulating interaction logic.
+
+The Mediator pattern is ideal for scenarios where you need to manage complex interactions between objects, such as chat applications, event handling systems, or UI components. It promotes loose coupling, flexibility, and maintainability.

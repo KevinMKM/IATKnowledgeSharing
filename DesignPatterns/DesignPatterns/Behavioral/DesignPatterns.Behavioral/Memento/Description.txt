@@ -1,1 +1,60 @@
-﻿
+﻿Memento Design Pattern
+The Memento is a behavioral design pattern that allows you to capture and externalize an object's internal state without violating encapsulation, so that the object can be restored to this state later. It is commonly used to implement undo/redo functionality.
+
+Key Idea
+Capture the internal state of an object (the originator) in a memento object.
+
+Store the memento object externally (e.g., in a caretaker).
+
+Restore the originator's state from the memento object when needed.
+
+When to Use the Memento Pattern
+When you need to implement undo/redo functionality.
+
+For example, in text editors, graphic editors, or transactional systems.
+
+When you want to save and restore an object's state without exposing its internal structure.
+
+The memento object encapsulates the state, preserving encapsulation.
+
+When you want to provide snapshots of an object's state.
+
+For example, saving checkpoints in a game or application.
+
+Example Without Memento
+Imagine you're building a simple text editor. Without the Memento pattern, you might store the text directly in the editor and implement undo/redo functionality by keeping a list of previous states:
+
+Problems with This Approach
+Violates Encapsulation:
+
+The TextEditor class is responsible for both managing the text and storing its history.
+
+Limited Flexibility:
+
+The undo/redo logic is tightly coupled to the TextEditor class.
+
+Memory Inefficiency:
+
+Storing the entire state (e.g., the entire text) in the history can be memory-intensive.
+
+With Memento
+
+Key Differences and Benefits
+Encapsulation:
+
+The TextEditor class does not expose its internal state; the state is encapsulated in the TextMemento class.
+
+Separation of Concerns:
+
+The History class is responsible for managing the state history, while the TextEditor class focuses on managing the text.
+
+Flexibility:
+
+You can easily extend the system to support redo functionality or multiple checkpoints.
+
+Summary
+Without Memento: Violation of encapsulation, limited flexibility, and memory inefficiency.
+
+With Memento: Encapsulation, separation of concerns, and flexibility in managing object state.
+
+The Memento pattern is ideal for scenarios where you need to save and restore an object's state, such as implementing undo/redo functionality, saving checkpoints, or managing transactional systems. It promotes encapsulation, flexibility, and maintainability.

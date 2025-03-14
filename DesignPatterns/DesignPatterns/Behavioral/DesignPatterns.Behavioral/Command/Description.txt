@@ -1,1 +1,60 @@
-﻿
+﻿Command Design Pattern
+The Command is a behavioral design pattern that encapsulates a request as an object, thereby allowing you to parameterize clients with different requests, queue or log requests, and support undoable operations.
+
+Key Idea
+Encapsulate a request as an object, separating the request's execution from the object that invokes it.
+
+Promote loose coupling between the sender (invoker) and the receiver (executor) of the request.
+
+Support features like queuing, logging, and undo/redo operations.
+
+When to Use the Command Pattern
+When you want to parameterize objects with operations.
+
+For example, creating a menu system where each menu item executes a different command.
+
+When you want to queue, log, or undo operations.
+
+For example, implementing an undo/redo feature in a text editor.
+
+When you want to decouple the sender of a request from its receiver.
+
+The sender doesn't need to know how the request is executed or who executes it.
+
+Example Without Command
+Imagine you're building a simple remote control for a light. Without the Command pattern, you might directly call the light's methods:
+
+Problems with This Approach
+Tight Coupling:
+
+The client code is tightly coupled to the Light class and its methods.
+
+No Flexibility:
+
+You cannot easily add new commands (e.g., dim the light) or change the behavior of existing commands.
+
+No Support for Advanced Features:
+
+You cannot queue, log, or undo operations.
+
+With Command
+
+Key Differences and Benefits
+Decoupling:
+
+The RemoteControl (invoker) is decoupled from the Light (receiver).
+
+Flexibility:
+
+You can easily add new commands (e.g., dim the light) or change the behavior of existing commands.
+
+Support for Advanced Features:
+
+You can queue, log, or undo operations by extending the ICommand interface.
+
+Summary
+Without Command: Tight coupling, lack of flexibility, and no support for advanced features like undo/redo.
+
+With Command: Decoupling, flexibility, and support for advanced features like queuing, logging, and undo/redo.
+
+The Command pattern is ideal for scenarios where you need to encapsulate requests as objects, such as implementing menu systems, remote controls, or undo/redo functionality. It promotes loose coupling, flexibility, and extensibility.

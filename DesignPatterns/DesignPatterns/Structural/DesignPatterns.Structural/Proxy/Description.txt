@@ -1,0 +1,60 @@
+﻿Proxy Design Pattern
+The Proxy is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. It is used to add a level of indirection to support controlled, intelligent, or optimized access to an object.
+
+Key Idea
+Create a proxy object that acts as an intermediary between the client and the real object.
+
+Control access to the real object (e.g., lazy initialization, access control, logging).
+
+The proxy implements the same interface as the real object, so the client interacts with the proxy as if it were the real object.
+
+When to Use the Proxy Pattern
+When you want to control access to an object.
+
+For example, adding authentication, logging, or caching.
+
+When you want to delay the creation and initialization of an expensive object until it's needed (lazy initialization).
+
+For example, loading a large image or a database connection.
+
+When you want to add a level of indirection to support remote access.
+
+For example, accessing an object on a remote server (remote proxy).
+
+Example Without Proxy
+Imagine you're building an application that loads and displays large images. Without the Proxy pattern, you might load the image directly when the application starts, even if it's not immediately needed:
+
+Problems with This Approach
+Eager Loading:
+
+The image is loaded from disk as soon as the Image object is created, even if it's not immediately needed.
+
+Performance Overhead:
+
+Loading large images or resources upfront can lead to performance issues, especially if the resource is never used.
+
+No Control Over Access:
+
+There is no way to add additional behavior (e.g., logging, caching) when accessing the image.
+
+With Proxy
+
+Key Differences and Benefits
+Lazy Initialization:
+
+The image is loaded from disk only when it's actually needed (when Display is called).
+
+Controlled Access:
+
+The proxy can add additional behavior (e.g., logging, caching) when accessing the real object.
+
+Separation of Concerns:
+
+The client code interacts with the proxy, which handles the complexity of accessing the real object.
+
+Summary
+Without Proxy: Eager loading leads to performance overhead and lack of control over access.
+
+With Proxy: Lazy initialization, controlled access, and separation of concerns improve performance and flexibility.
+
+The Proxy pattern is ideal for scenarios where you need to control access to an object, such as lazy initialization, access control, logging, or remote access. It promotes performance optimization, flexibility, and maintainability.

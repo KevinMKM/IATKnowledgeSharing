@@ -1,0 +1,60 @@
+﻿Flyweight Design Pattern
+The Flyweight is a structural design pattern that minimizes memory usage by sharing as much data as possible with similar objects. It is used when you need to create a large number of similar objects, and the memory cost of storing these objects is high.
+
+Key Idea
+Share common state (intrinsic state) among multiple objects.
+
+Store unique state (extrinsic state) outside the shared objects.
+
+Reduce memory usage by reusing shared objects instead of creating new ones.
+
+When to Use the Flyweight Pattern
+When you need to create a large number of similar objects.
+
+For example, rendering characters in a text editor or trees in a forest simulation.
+
+When the memory cost of storing these objects is high.
+
+Sharing common state can significantly reduce memory usage.
+
+When most of the object state can be made extrinsic.
+
+The unique state can be passed to the object when needed, rather than stored within it.
+
+Example Without Flyweight
+Imagine you're building a text editor that needs to render a large number of characters. Without the Flyweight pattern, you might create a separate object for each character:
+
+Problems with This Approach
+High Memory Usage:
+
+Each character object stores its own state, leading to high memory usage.
+
+Redundant Data:
+
+The font and size are the same for all characters, but they are stored redundantly in each object.
+
+Inefficiency:
+
+Creating and managing a large number of objects can be inefficient.
+
+With Flyweight
+
+Key Differences and Benefits
+Reduced Memory Usage:
+
+The CharacterFlyweight class stores only the intrinsic state (symbol), while the extrinsic state (font, size) is passed when needed.
+
+Shared State:
+
+The CharacterFlyweightFactory ensures that only one CharacterFlyweight object is created for each unique symbol.
+
+Efficiency:
+
+Creating and managing a large number of objects is more efficient, as common state is shared.
+
+Summary
+Without Flyweight: High memory usage, redundant data, and inefficiency due to creating a large number of similar objects.
+
+With Flyweight: Reduced memory usage, shared state, and improved efficiency by reusing shared objects.
+
+The Flyweight pattern is ideal for scenarios where you need to create a large number of similar objects, such as rendering characters in a text editor, trees in a forest simulation, or particles in a game. It promotes memory efficiency and performance optimization.

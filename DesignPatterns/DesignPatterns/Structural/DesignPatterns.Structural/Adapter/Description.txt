@@ -1,0 +1,62 @@
+﻿Adapter Design Pattern
+The Adapter is a structural design pattern that allows incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces by converting the interface of a class into another interface that a client expects.
+
+Key Idea
+Convert the interface of a class into another interface that the client expects.
+
+Allow classes with incompatible interfaces to collaborate.
+
+Promote reusability of existing classes without modifying their code.
+
+When to Use the Adapter Pattern
+When you want to use an existing class, but its interface doesn't match the one you need.
+
+For example, integrating a third-party library or legacy code.
+
+When you want to create a reusable class that cooperates with unrelated or unforeseen classes.
+
+For example, creating a plugin system.
+
+When you want to provide a unified interface to multiple similar classes with different interfaces.
+
+For example, working with different payment gateways.
+
+Example Without Adapter
+Imagine you're building a payment system that processes payments using a third-party payment gateway. The third-party gateway has a method ProcessPayment with a different signature than what your system expects.
+
+Problems with This Approach
+Incompatible Interfaces:
+
+The PaymentProcessor and ThirdPartyPaymentGateway have different methods and parameters, making them incompatible.
+
+Code Duplication:
+
+If you need to use the third-party gateway in multiple places, you have to manually adapt the interface each time.
+
+Tight Coupling:
+
+The client code is tightly coupled to the specific implementation of the payment gateway.
+
+Key Differences and Benefits
+Compatibility:
+
+The adapter allows the ThirdPartyPaymentGateway to work with the IPaymentProcessor interface expected by the client.
+
+Reusability:
+
+The adapter can be reused wherever the third-party gateway needs to be integrated.
+
+Separation of Concerns:
+
+The client code doesn't need to know about the third-party gateway's interface; it only interacts with the IPaymentProcessor interface.
+
+Flexibility:
+
+You can easily switch between different payment processors (e.g., your system's processor or the third-party gateway) without modifying the client code.
+
+Summary
+Without Adapter: Incompatible interfaces lead to code duplication, tight coupling, and inflexibility.
+
+With Adapter: The adapter acts as a bridge between incompatible interfaces, promoting reusability, flexibility, and separation of concerns.
+
+The Adapter pattern is ideal for integrating third-party libraries, legacy code, or systems with incompatible interfaces. It is widely used in frameworks, libraries, and systems that need to work with multiple external components.

@@ -1,1 +1,60 @@
-﻿
+﻿Template Method Design Pattern
+The Template Method is a behavioral design pattern that defines the skeleton of an algorithm in a method, deferring some steps to subclasses. It allows subclasses to redefine certain steps of an algorithm without changing the algorithm's structure.
+
+Key Idea
+Define the structure of an algorithm in a base class (the template method).
+
+Allow subclasses to override specific steps of the algorithm without changing its overall structure.
+
+Promote code reuse and consistency in algorithm implementation.
+
+When to Use the Template Method Pattern
+When you want to enforce a common algorithm structure across multiple subclasses.
+
+For example, a data processing pipeline with fixed steps but customizable implementations.
+
+When you want to avoid code duplication by sharing common behavior in a base class.
+
+The template method encapsulates the common logic.
+
+When you want to allow subclasses to customize specific steps of an algorithm.
+
+Subclasses can override the "hook" methods to provide their own implementations.
+
+Example Without Template Method
+Imagine you're building a system for generating reports. Without the Template Method pattern, you might duplicate the report generation logic in each report type:
+
+Problems with This Approach
+Code Duplication:
+
+The common steps (e.g., fetching data) are duplicated across report types.
+
+Violates DRY Principle:
+
+The "Don't Repeat Yourself" principle is violated, making the code harder to maintain.
+
+Inflexibility:
+
+Adding a new report type requires duplicating the common logic again.
+
+With Template Method
+
+Key Differences and Benefits
+Code Reuse:
+
+The common steps (e.g., fetching data) are shared in the base class, eliminating duplication.
+
+Consistency:
+
+The overall structure of the algorithm is enforced by the template method.
+
+Flexibility:
+
+Subclasses can customize specific steps (e.g., formatting and generating output) without changing the algorithm's structure.
+
+Summary
+Without Template Method: Code duplication, violation of the DRY principle, and inflexibility.
+
+With Template Method: Code reuse, consistency, and flexibility by encapsulating the algorithm's structure in a base class.
+
+The Template Method pattern is ideal for scenarios where you need to enforce a common algorithm structure while allowing subclasses to customize specific steps, such as report generation, data processing pipelines, or workflow systems. It promotes code reuse, consistency, and maintainability.

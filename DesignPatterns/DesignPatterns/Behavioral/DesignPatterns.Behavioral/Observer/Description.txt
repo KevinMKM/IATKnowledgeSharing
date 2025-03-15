@@ -1,1 +1,60 @@
-﻿
+﻿Observer Design Pattern
+The Observer is a behavioral design pattern that defines a one-to-many dependency between objects so that when one object (the subject) changes state, all its dependents (observers) are notified and updated automatically. It is commonly used in event handling systems, such as GUI frameworks or publish-subscribe systems.
+
+Key Idea
+Define a subject that maintains a list of observers and notifies them of state changes.
+
+Observers register with the subject to receive updates.
+
+Promote loose coupling between the subject and observers.
+
+When to Use the Observer Pattern
+When you need to notify multiple objects about changes in another object.
+
+For example, updating UI components when data changes.
+
+When you want to decouple the subject from its observers.
+
+The subject doesn't need to know the details of its observers.
+
+When you want to support dynamic relationships between objects.
+
+Observers can be added or removed at runtime.
+
+Example Without Observer
+Imagine you're building a weather monitoring system where multiple displays (e.g., current conditions, statistics) need to be updated when the weather data changes. Without the Observer pattern, you might directly update each display:
+
+Problems with This Approach
+Tight Coupling:
+
+The WeatherData class is tightly coupled to the specific display classes.
+
+Inflexibility:
+
+Adding a new display (e.g., a forecast display) requires modifying the WeatherData class.
+
+Violates Open/Closed Principle:
+
+The WeatherData class is not open for extension but closed for modification.
+
+With Observer
+
+Key Differences and Benefits
+Loose Coupling:
+
+The WeatherData class is decoupled from the specific display classes.
+
+Flexibility:
+
+You can easily add or remove observers without modifying the WeatherData class.
+
+Open/Closed Principle:
+
+The WeatherData class is open for extension (new observers) but closed for modification.
+
+Summary
+Without Observer: Tight coupling, inflexibility, and violation of the Open/Closed Principle.
+
+With Observer: Loose coupling, flexibility, and adherence to the Open/Closed Principle.
+
+The Observer pattern is ideal for scenarios where you need to notify multiple objects about changes in another object, such as updating UI components, implementing publish-subscribe systems, or handling event-driven architectures. It promotes loose coupling, flexibility, and maintainability.

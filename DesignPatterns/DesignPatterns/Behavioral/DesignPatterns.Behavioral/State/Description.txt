@@ -1,1 +1,60 @@
-﻿
+﻿State Design Pattern
+The State is a behavioral design pattern that allows an object to change its behavior when its internal state changes. It encapsulates state-specific behavior into separate classes and delegates the behavior to the current state object.
+
+Key Idea
+Encapsulate state-specific behavior into separate state classes.
+
+Delegate behavior to the current state object.
+
+Allow the object to change its behavior dynamically by switching state objects.
+
+When to Use the State Pattern
+When an object's behavior depends on its state and it needs to change its behavior at runtime.
+
+For example, a vending machine that behaves differently depending on whether it has items in stock or is out of stock.
+
+When you have a lot of conditional statements that depend on the object's state.
+
+The State pattern replaces these conditionals with state-specific classes.
+
+When you want to make the state transitions explicit and manageable.
+
+Each state class can define the transitions to other states.
+
+Example Without State
+Imagine you're building a vending machine that sells drinks. Without the State pattern, you might use conditional logic to handle the machine's behavior based on its state:
+
+Problems with This Approach
+Complex Conditional Logic:
+
+The VendingMachine class is cluttered with conditional statements that depend on the state.
+
+Violates Open/Closed Principle:
+
+Adding a new state (e.g., maintenance mode) requires modifying the VendingMachine class.
+
+Hard to Maintain:
+
+The code becomes harder to read and maintain as the number of states and transitions grows.
+
+With State
+
+Key Differences and Benefits
+Simplified Logic:
+
+Each state class encapsulates the behavior for a specific state, eliminating complex conditional logic.
+
+Open/Closed Principle:
+
+You can add new states without modifying the VendingMachine class.
+
+Maintainability:
+
+The code is easier to read, maintain, and extend.
+
+Summary
+Without State: Complex conditional logic, violation of the Open/Closed Principle, and hard-to-maintain code.
+
+With State: Simplified logic, adherence to the Open/Closed Principle, and improved maintainability.
+
+The State pattern is ideal for scenarios where an object's behavior depends on its state, such as vending machines, game characters, or workflow systems. It promotes flexibility, maintainability, and extensibility.

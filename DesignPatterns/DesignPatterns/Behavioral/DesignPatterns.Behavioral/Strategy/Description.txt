@@ -1,1 +1,61 @@
-﻿
+﻿Strategy Design Pattern
+The Strategy is a behavioral design pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows the algorithm to vary independently from the client that uses it.
+
+Key Idea
+Define a family of algorithms (strategies) and encapsulate each one in a separate class.
+
+Make the strategies interchangeable by implementing a common interface.
+
+Allow the client to choose the appropriate strategy at runtime.
+
+When to Use the Strategy Pattern
+When you have multiple algorithms for a task and want to switch between them dynamically.
+
+For example, sorting algorithms, compression algorithms, or payment methods.
+
+When you want to avoid conditional statements for selecting algorithms.
+
+The Strategy pattern replaces conditionals with polymorphism.
+
+When you want to isolate the algorithm's implementation details from the client code.
+
+The client only interacts with the strategy interface.
+
+Example Without Strategy
+Imagine you're building a payment system that supports multiple payment methods (e.g., credit card, PayPal, Bitcoin). Without the Strategy pattern, you might use conditional logic to handle each payment method:
+
+Problems with This Approach
+Tight Coupling:
+
+The PaymentProcessor class is tightly coupled to the specific payment methods.
+
+Violates Open/Closed Principle:
+
+Adding a new payment method (e.g., Apple Pay) requires modifying the PaymentProcessor class.
+
+Hard to Maintain:
+
+The code becomes harder to read and maintain as the number of payment methods grows.
+
+With Strategy
+Now, let's refactor the above example using the Strategy pattern.
+
+Key Differences and Benefits
+Loose Coupling:
+
+The PaymentProcessor class is decoupled from the specific payment methods.
+
+Open/Closed Principle:
+
+You can add new payment methods without modifying the PaymentProcessor class.
+
+Flexibility:
+
+The client can switch between payment methods at runtime.
+
+Summary
+Without Strategy: Tight coupling, violation of the Open/Closed Principle, and hard-to-maintain code.
+
+With Strategy: Loose coupling, adherence to the Open/Closed Principle, and improved flexibility.
+
+The Strategy pattern is ideal for scenarios where you need to switch between multiple algorithms or behaviors dynamically, such as payment methods, sorting algorithms, or compression techniques. It promotes flexibility, maintainability, and extensibility.

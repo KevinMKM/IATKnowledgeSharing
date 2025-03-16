@@ -1,9 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseIntegrationPatterns", "EnterpriseIntegrationPatterns\EnterpriseIntegrationPatterns.csproj", "{F395AAA2-8194-4367-A89F-697067F931EE}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F395AAA2-8194-4367-A89F-697067F931EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F395AAA2-8194-4367-A89F-697067F931EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F395AAA2-8194-4367-A89F-697067F931EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F395AAA2-8194-4367-A89F-697067F931EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
